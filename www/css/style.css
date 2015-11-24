@@ -3,7 +3,7 @@
 
 /* body background color */
 .backcolor{background-color:#F8F8F8}
-.bodycolor{background-color:#000; color:#FFF;}
+.bodycolor{background-color:#000; color:#FFF; border-left-color:#000;}
 /* ancher config */
 a{text-decoration: none; display:block; width:100%; color:#000;}
 
