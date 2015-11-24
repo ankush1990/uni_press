@@ -55,7 +55,8 @@ angular.module('ionicApp', ['ionic','ngCordova','ngIOS9UIWebViewPatch','starter.
       url: "/reviewdetail",
       views: {
         'menuContent' :{
-          templateUrl: "templates/reviewdetail.html"
+          templateUrl: "templates/reviewdetail.html",
+		  controller: "reviewdetailCtrl"
         }
       }
     })
@@ -63,7 +64,8 @@ angular.module('ionicApp', ['ionic','ngCordova','ngIOS9UIWebViewPatch','starter.
       url: "/reviewdetail1",
       views: {
         'menuContent' :{
-          templateUrl: "templates/reviewdetail1.html"
+          templateUrl: "templates/reviewdetail1.html",
+		  controller: "reviewdetail1Ctrl"
         }
       }
     })
@@ -71,7 +73,8 @@ angular.module('ionicApp', ['ionic','ngCordova','ngIOS9UIWebViewPatch','starter.
       url: "/translatedetail1",
       views: {
         'menuContent' :{
-          templateUrl: "templates/translatedetail1.html"
+          templateUrl: "templates/translatedetail1.html",
+		  controller: "translatedetail1Ctrl"
         }
       }
     })
@@ -79,7 +82,8 @@ angular.module('ionicApp', ['ionic','ngCordova','ngIOS9UIWebViewPatch','starter.
       url: "/editdetail1",
       views: {
         'menuContent' :{
-          templateUrl: "templates/editdetail1.html"
+          templateUrl: "templates/editdetail1.html",
+		  controller: "editdetail1Ctrl"
         }
       }
     })

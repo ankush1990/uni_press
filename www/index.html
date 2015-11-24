@@ -18,10 +18,9 @@
 
 <script id="sign-in.html" type="text/ng-template">
   <ion-view view-title="Cà Foscari University Press">
-  	
-	<ion-content class="bodycolor"> 
+  	<ion-content class="bodycolor"> 
 	  	<div class="list card">
-			<div class="item item-image">
+			<div class="item item-image" >
 				<img src="images/user100.png">
 		  	</div>
 		</div>
@@ -53,17 +52,15 @@
 
 <script id="templates/check-in.html" type="text/ng-template">
   <ion-view view-title="Cà Foscari University Press">
-  	<ion-nav-title style="height:70px;">
-      <img src="images/50icon.png" style="vertical-align:top; height:40px;">
-	  Cà Foscari University Press
-    </ion-nav-title>
-	<ion-content class="bodycolor"> 
-	  	<div class="list card">
-			<div class="item item-image">
-				<img src="images/user100.png">
-		  	</div>
+	  	<ion-nav-title class="titleh" style="height:100px;">
+		  <img src="images/50icon.png" style="vertical-align:top; height:40px;">
+		  <span style="font-size:15px;">Cà Foscari University Data Publishing</span>
+		</ion-nav-title>
+  	<ion-content class="bodycolor"> 
+		<div style="margin-top:40px;">
+			<center><img src="images/user.png" height="240px;"></center>
 		</div>
-		<center><button class="button button-energized" ng-click="showtask()">Tasks</button></center>
+		<center><button class="button button-large button-energized" style="margin-top:15px;" ng-click="showtask()">Tasks</button></center>
 	</ion-content>
   </ion-view>
 </script>
@@ -72,21 +69,23 @@
 <script id="templates/tasks.html" type="text/ng-template">
   <ion-view view-title="Review">
 	<ion-content class="bodycolor">
-	<div class="row">
-	  <div class="col col-30" style="font-size:15px;" ng-click="showreview()">1. Review</div>
-	  <div class="col col-35"><button class="button {{buttoncolor11}}" ng-click="changecolor(11)">Accepted</button></div>
-	  <div class="col col-35" ><button class="button {{buttoncolor12}}" ng-click="changecolor(12)">Done</button></div>
-	</div>
-	<div class="row">
-	  <div class="col col-30" style="font-size:15px;" ng-click="showedit()">2. Editing</div>
-	  <div class="col col-35"><button class="button {{buttoncolor21}}" ng-click="changecolor(21)">Accepted</button></div>
-	  <div class="col col-35" ><button class="button {{buttoncolor22}}" ng-click="changecolor(22)">Done</button></div>
-	</div>
-	<div class="row">
-	  <div class="col col-30" style="font-size:15px;" ng-click="showtranslate()">3. Translation</div>
-	  <div class="col col-35"><button class="button {{buttoncolor31}}" ng-click="changecolor(31)">Accepted</button></div>
-	  <div class="col col-35" ><button class="button {{buttoncolor32}}" ng-click="changecolor(32)">Done</button></div>
-	</div>
+	<ul class="list">
+			<li class="item bodycolor">
+				<a href="#/event/review" class="item-icon-right bodycolor"> 1. Reviewing
+					 <i class="icon ion-ios-arrow-right"></i>
+				</a>
+			</li>
+			<li class="item bodycolor">
+				<a href="#/event/translate" class="item-icon-right bodycolor"> 2. Translating
+					 <i class="icon ion-ios-arrow-right"></i>
+				</a>
+			</li>
+			<li class="item bodycolor">
+				<a href="#/event/edit" class="item-icon-right bodycolor"> 3. Editing
+					 <i class="icon ion-ios-arrow-right"></i>
+				</a>
+			</li>
+		</ul>
 	</ion-content>
   </ion-view>
 </script>
@@ -130,6 +129,10 @@
 		  <span class="input-label bodycolor">Referent:</span>
 		  <span class="input-label bodycolor">Professor Giovanni Vaia</span>
 		</label>
+		<div class="row">
+		  <div class="col col-50" style="text-align:center"><button class="button {{buttoncolor11}}" ng-click="changecolor(11)">Accepted</button></div>
+		  <div class="col col-50" style="text-align:center"><button class="button {{buttoncolor12}}" ng-click="changecolor(12)">Done</button></div>
+		</div>
 	  </div>
 	</ion-content>
   </ion-view>
@@ -155,6 +158,10 @@
 		  <span class="input-label bodycolor">Referent:</span>
 		  <span class="input-label bodycolor">Professor Giovanni Vaia</span>
 		</label>
+		<div class="row">
+		  <div class="col col-50" style="text-align:center"><button class="button {{buttoncolor11}}" ng-click="changecolor(11)">Accepted</button></div>
+		  <div class="col col-50" style="text-align:center"><button class="button {{buttoncolor12}}" ng-click="changecolor(12)">Done</button></div>
+		</div>
 	  </div>
 	</ion-content>
   </ion-view>
@@ -194,6 +201,10 @@
 		  <span class="input-label bodycolor">Referent:</span>
 		  <span class="input-label bodycolor">Professor Giovanni Vaia</span>
 		</label>
+		<div class="row">
+		  <div class="col col-50" style="text-align:center"><button class="button {{buttoncolor11}}" ng-click="changecolor(11)">Accepted</button></div>
+		  <div class="col col-50" style="text-align:center"><button class="button {{buttoncolor12}}" ng-click="changecolor(12)">Done</button></div>
+		</div>
 	  </div>
 	</ion-content>
   </ion-view>
@@ -233,6 +244,11 @@
 		  <span class="input-label bodycolor">Referent:</span>
 		  <span class="input-label bodycolor">Professor Giovanni Vaia</span>
 		</label>
+		
+		<div class="row">
+		  <div class="col col-50" style="text-align:center"><button class="button {{buttoncolor11}}" ng-click="changecolor(11)">Accepted</button></div>
+		  <div class="col col-50" style="text-align:center"><button class="button {{buttoncolor12}}" ng-click="changecolor(12)">Done</button></div>
+		</div>
 	  </div>
 	</ion-content>
   </ion-view>

@@ -33,22 +33,6 @@ angular.module('starter.controllers', [])
 })
 
 .controller('tasksCtrl', function($scope,$state) {
-	$scope.buttoncolor11 = "button-assertive";
-	$scope.buttoncolor12 = "button-assertive";
-	$scope.buttoncolor21 = "button-assertive";
-	$scope.buttoncolor22 = "button-assertive";
-	$scope.buttoncolor31 = "button-assertive";
-	$scope.buttoncolor32 = "button-assertive";
-	
-	$scope.changecolor = function(val){
-		if(val == 11)$scope.buttoncolor11 = "button-energized";
-		if(val == 12)$scope.buttoncolor12 = "button-balanced";
-		if(val == 21)$scope.buttoncolor21 = "button-energized";
-		if(val == 22)$scope.buttoncolor22 = "button-balanced";
-		if(val == 31)$scope.buttoncolor31 = "button-energized";
-		if(val == 32)$scope.buttoncolor32 = "button-balanced";
-	}
-	
 	$scope.showreview = function(){
 		$state.go('eventmenu.review');
 	}
@@ -84,6 +68,89 @@ angular.module('starter.controllers', [])
 .controller('editCtrl', function($scope,$state) {
 	$scope.showeditdetail1 = function(){
 		$state.go('eventmenu.editdetail1');
+	}
+})
+
+.controller('reviewdetailCtrl', function($scope,$state) {
+	var val1 = localStorage.getItem("rbutton1");
+	var val2 = localStorage.getItem("rbutton2");
+	
+	if(val1 != 1)$scope.buttoncolor11 = "button-assertive";
+	else $scope.buttoncolor11 = "button-energized";
+	if(val2 != 1)$scope.buttoncolor12 = "button-assertive";
+	else $scope.buttoncolor12 = "button-balanced";
+	
+	$scope.changecolor = function(val){
+		
+		if(val == 11){
+			$scope.buttoncolor11 = "button-energized";
+			localStorage.setItem("rbutton1",1);
+		}
+		if(val == 12){
+			$scope.buttoncolor12 = "button-balanced";
+			localStorage.setItem("rbutton2",1);
+		}
+	}
+})
+.controller('reviewdetail1Ctrl', function($scope,$state) {
+	var val1 = localStorage.getItem("r1button1");
+	var val2 = localStorage.getItem("r1button2");
+	
+	if(val1 != 1)$scope.buttoncolor11 = "button-assertive";
+	else $scope.buttoncolor11 = "button-energized";
+	if(val2 != 1)$scope.buttoncolor12 = "button-assertive";
+	else $scope.buttoncolor12 = "button-balanced";
+	
+	
+	$scope.changecolor = function(val){
+		if(val == 11){
+			$scope.buttoncolor11 = "button-energized";
+			localStorage.setItem("r1button1",1);
+		}
+		if(val == 12){
+			$scope.buttoncolor12 = "button-balanced";
+			localStorage.setItem("r1button2",1);
+		}
+	}
+})
+.controller('translatedetail1Ctrl', function($scope,$state) {
+	var val1 = localStorage.getItem("tbutton1");
+	var val2 = localStorage.getItem("tbutton2");
+	
+	if(val1 != 1)$scope.buttoncolor11 = "button-assertive";
+	else $scope.buttoncolor11 = "button-energized";
+	if(val2 != 1)$scope.buttoncolor12 = "button-assertive";
+	else $scope.buttoncolor12 = "button-balanced";
+	
+	$scope.changecolor = function(val){
+		if(val == 11){
+			$scope.buttoncolor11 = "button-energized";
+			localStorage.setItem("tbutton1",1);
+		}
+		if(val == 12){
+			$scope.buttoncolor12 = "button-balanced";
+			localStorage.setItem("tbutton2",1);
+		}
+	}
+})
+.controller('editdetail1Ctrl', function($scope,$state) {
+	var val1 = localStorage.getItem("ebutton1");
+	var val2 = localStorage.getItem("ebutton2");
+	
+	if(val1 != 1)$scope.buttoncolor11 = "button-assertive";
+	else $scope.buttoncolor11 = "button-energized";
+	if(val2 != 1)$scope.buttoncolor12 = "button-assertive";
+	else $scope.buttoncolor12 = "button-balanced";
+	
+	$scope.changecolor = function(val){
+		if(val == 11){
+			$scope.buttoncolor11 = "button-energized";
+			localStorage.setItem("ebutton1",1);
+		}
+		if(val == 12){
+			$scope.buttoncolor12 = "button-balanced";
+			localStorage.setItem("ebutton2",1);
+		}
 	}
 })
 
