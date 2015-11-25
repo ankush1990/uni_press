@@ -57,14 +57,25 @@
 		  <span style="font-size:15px;">Cà Foscari University Digital Publishing</span>
 		</ion-nav-title>
   	<ion-content class="bodycolor"> 
-		<div style="margin-top:15px;">
-			<center><img src="images/user.png" height="240px;" width="240px;"></center>
+		<div class="row" style="margin-top:15px;">
+			<div class="col"></div>
+			<img src="images/user.png" height="240px;" width="220px;"></center>
+			<div class="col"></div>
+		</div>
+		
+		
+		<div class="row" style="margin-top:20px;">
+			<div class="col"></div>
+			<button class="button button-large button-energized"><img src="images/send.png" width="70px;"></button>
+			&nbsp;&nbsp;&nbsp;
+			<button class="button button-large button-energized"><img src="images/ring.png" width="70px;"></button>
+			<div class="col"></div>
 		</div>
 		<div class="row">
-			<div class="col col-50" style="text-align:center"><button class="button button-large button-energized"><img src="images/send.png" width="50px;"></button></div>
-			<div class="col col-50" style="text-align:center; margin-left:0px;"><button class="button button-large button-energized"><img src="images/ring.png" width="50px;"></button></div>
+			<div class="col"></div>
+			<button class="button button-large button-energized" style="margin-top:15px; width:220px;" ng-click="showtask()">Tasks</button>
+			<div class="col"></div>
 		</div>
-		<center><button class="button button-large button-energized" style="margin-top:15px; width:240px;" ng-click="showtask()">Tasks</button></center>
 	</ion-content>
   </ion-view>
 </script>
