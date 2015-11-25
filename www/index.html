@@ -54,13 +54,17 @@
   <ion-view view-title="Cà Foscari University Press">
 	  	<ion-nav-title class="titleh" style="height:100px;">
 		  <img src="images/50icon.png" style="vertical-align:top; height:40px;">
-		  <span style="font-size:15px;">Cà Foscari University Data Publishing</span>
+		  <span style="font-size:15px;">Cà Foscari University Digital Publishing</span>
 		</ion-nav-title>
   	<ion-content class="bodycolor"> 
-		<div style="margin-top:40px;">
-			<center><img src="images/user.png" height="240px;"></center>
+		<div style="margin-top:15px;">
+			<center><img src="images/user.png" height="240px;" width="240px;"></center>
 		</div>
-		<center><button class="button button-large button-energized" style="margin-top:15px;" ng-click="showtask()">Tasks</button></center>
+		<div class="row">
+			<div class="col col-50" style="text-align:center"><button class="button button-large button-energized"><img src="images/send.png" width="50px;"></button></div>
+			<div class="col col-50" style="text-align:center; margin-left:0px;"><button class="button button-large button-energized"><img src="images/ring.png" width="50px;"></button></div>
+		</div>
+		<center><button class="button button-large button-energized" style="margin-top:15px; width:240px;" ng-click="showtask()">Tasks</button></center>
 	</ion-content>
   </ion-view>
 </script>
@@ -110,12 +114,16 @@
 </script>
 
 <script id="templates/reviewdetail.html" type="text/ng-template">
-  <ion-view view-title="Review Detail">
+  <ion-view view-title="{{reviewtitle}}">
 	<ion-content class="bodycolor">
 	<div class="list">
 	  <label class="item item-input bodycolor">
 		  <span class="input-label bodycolor">Description:</span>
 		  <span class="input-label bodycolor">Economic report, 15 pages</span>
+		</label>
+		<label class="item item-input bodycolor">
+		  <span class="input-label bodycolor">Language:</span>
+		  <span class="input-label bodycolor">English</span>
 		</label>
 		<label class="item item-input bodycolor">
 		  <span class="input-label bodycolor">Deadline:</span>
@@ -129,6 +137,10 @@
 		  <span class="input-label bodycolor">Referent:</span>
 		  <span class="input-label bodycolor">Professor Giovanni Vaia</span>
 		</label>
+		<label class="item item-input bodycolor">
+		  <span class="input-label bodycolor">Contact:</span>
+		  <span class="input-label bodycolor">m.spolaor@gmail.com</span>
+		</label>
 		<div class="row">
 		  <div class="col col-50" style="text-align:center"><button class="button {{buttoncolor11}}" ng-click="changecolor(11)">Accepted</button></div>
 		  <div class="col col-50" style="text-align:center"><button class="button {{buttoncolor12}}" ng-click="changecolor(12)">Done</button></div>
@@ -139,12 +151,16 @@
 </script>
 
 <script id="templates/reviewdetail1.html" type="text/ng-template">
-  <ion-view view-title="Review Detail">
+  <ion-view view-title="{{reviewtitle}}">
 	<ion-content class="bodycolor">
 	<div class="list">
 	  <label class="item item-input bodycolor">
 		  <span class="input-label bodycolor">Description:</span>
 		  <span class="input-label bodycolor">Scientific dissertation, 21 pages</span>
+		</label>
+		<label class="item item-input bodycolor">
+		  <span class="input-label bodycolor">Language:</span>
+		  <span class="input-label bodycolor">English</span>
 		</label>
 		<label class="item item-input bodycolor">
 		  <span class="input-label bodycolor">Deadline:</span>
@@ -157,6 +173,10 @@
 		<label class="item item-input bodycolor">
 		  <span class="input-label bodycolor">Referent:</span>
 		  <span class="input-label bodycolor">Professor Giovanni Vaia</span>
+		</label>
+		<label class="item item-input bodycolor">
+		  <span class="input-label bodycolor">Contact:</span>
+		  <span class="input-label bodycolor">m.spolaor@gmail.com</span>
 		</label>
 		<div class="row">
 		  <div class="col col-50" style="text-align:center"><button class="button {{buttoncolor11}}" ng-click="changecolor(11)">Accepted</button></div>
@@ -182,12 +202,16 @@
 </script>
 
 <script id="templates/translatedetail1.html" type="text/ng-template">
-  <ion-view view-title="Translate Detail">
+  <ion-view view-title="{{reviewtitle}}">
 	<ion-content class="bodycolor">
 	<div class="list">
 	  <label class="item item-input bodycolor">
 		  <span class="input-label bodycolor">Description:</span>
 		  <span class="input-label bodycolor">Sociological report, 40 pages</span>
+		</label>
+		<label class="item item-input bodycolor">
+		  <span class="input-label bodycolor">Language:</span>
+		  <span class="input-label bodycolor">Japanese</span>
 		</label>
 		<label class="item item-input bodycolor">
 		  <span class="input-label bodycolor">Deadline:</span>
@@ -200,6 +224,10 @@
 		<label class="item item-input bodycolor">
 		  <span class="input-label bodycolor">Referent:</span>
 		  <span class="input-label bodycolor">Professor Giovanni Vaia</span>
+		</label>
+		<label class="item item-input bodycolor">
+		  <span class="input-label bodycolor">Contact:</span>
+		  <span class="input-label bodycolor">m.spolaor@gmail.com</span>
 		</label>
 		<div class="row">
 		  <div class="col col-50" style="text-align:center"><button class="button {{buttoncolor11}}" ng-click="changecolor(11)">Accepted</button></div>
@@ -215,7 +243,7 @@
 	<ion-content class="bodycolor">
 	<ul class="list">
 			<li class="item bodycolor">
-				<a class="item-icon-right bodycolor" ng-click="showeditdetail1()">1. Article C by Jesse Stuart
+				<a class="item-icon-right bodycolor" ng-click="showeditdetail1()">1. Article D	by Alfredo Colli
 					 <i class="icon ion-ios-arrow-right"></i>
 				</a>
 			</li>
@@ -225,12 +253,16 @@
 </script>
 
 <script id="templates/editdetail1.html" type="text/ng-template">
-  <ion-view view-title="Edit Detail">
+  <ion-view view-title="{{reviewtitle}}">
 	<ion-content class="bodycolor">
 	<div class="list">
 	  <label class="item item-input bodycolor">
 		  <span class="input-label bodycolor">Description:</span>
 		  <span class="input-label bodycolor">Historic essay, 34 pages</span>
+		</label>
+		<label class="item item-input bodycolor">
+		  <span class="input-label bodycolor">Language:</span>
+		  <span class="input-label bodycolor">Italian</span>
 		</label>
 		<label class="item item-input bodycolor">
 		  <span class="input-label bodycolor">Deadline:</span>
@@ -244,7 +276,10 @@
 		  <span class="input-label bodycolor">Referent:</span>
 		  <span class="input-label bodycolor">Professor Giovanni Vaia</span>
 		</label>
-		
+		<label class="item item-input bodycolor">
+		  <span class="input-label bodycolor">Contact:</span>
+		  <span class="input-label bodycolor">m.spolaor@gmail.com</span>
+		</label>
 		<div class="row">
 		  <div class="col col-50" style="text-align:center"><button class="button {{buttoncolor11}}" ng-click="changecolor(11)">Accepted</button></div>
 		  <div class="col col-50" style="text-align:center"><button class="button {{buttoncolor12}}" ng-click="changecolor(12)">Done</button></div>

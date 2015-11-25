@@ -75,6 +75,8 @@ angular.module('starter.controllers', [])
 	var val1 = localStorage.getItem("rbutton1");
 	var val2 = localStorage.getItem("rbutton2");
 	
+	$scope.reviewtitle = "Article A by John Smith";
+	
 	if(val1 != 1)$scope.buttoncolor11 = "button-assertive";
 	else $scope.buttoncolor11 = "button-energized";
 	if(val2 != 1)$scope.buttoncolor12 = "button-assertive";
@@ -95,6 +97,8 @@ angular.module('starter.controllers', [])
 .controller('reviewdetail1Ctrl', function($scope,$state) {
 	var val1 = localStorage.getItem("r1button1");
 	var val2 = localStorage.getItem("r1button2");
+	
+	$scope.reviewtitle = "Article B by Fred Malton";
 	
 	if(val1 != 1)$scope.buttoncolor11 = "button-assertive";
 	else $scope.buttoncolor11 = "button-energized";
@@ -117,6 +121,8 @@ angular.module('starter.controllers', [])
 	var val1 = localStorage.getItem("tbutton1");
 	var val2 = localStorage.getItem("tbutton2");
 	
+	$scope.reviewtitle = "Article C by Jesse Stuart";
+	
 	if(val1 != 1)$scope.buttoncolor11 = "button-assertive";
 	else $scope.buttoncolor11 = "button-energized";
 	if(val2 != 1)$scope.buttoncolor12 = "button-assertive";
@@ -136,6 +142,8 @@ angular.module('starter.controllers', [])
 .controller('editdetail1Ctrl', function($scope,$state) {
 	var val1 = localStorage.getItem("ebutton1");
 	var val2 = localStorage.getItem("ebutton2");
+	
+	$scope.reviewtitle = "Article D	by Alfredo Colli";
 	
 	if(val1 != 1)$scope.buttoncolor11 = "button-assertive";
 	else $scope.buttoncolor11 = "button-energized";

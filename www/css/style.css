@@ -5,7 +5,9 @@
 .backcolor{background-color:#F8F8F8}
 .bodycolor{background-color:#000; color:#FFF; border-left-color:#000;}
 /* ancher config */
-a{text-decoration: none; display:block; width:100%; color:#000;}
+a{text-decoration: none; display:block; width:100%; color:#000; }
+
+.button-image{background: url(../images/ring.png) no-repeat;}
 
 .titleh{height:100px; }
 /* header background color */
