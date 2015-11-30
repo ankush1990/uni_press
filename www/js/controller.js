@@ -21,17 +21,6 @@ angular.module('starter.controllers', [])
 	}
 })
 
-.controller('SignInCtrl', function($scope,$state,$http) {
-	$http.post("http://"+globalip+"/checkapi.php", {
-		headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}
-	})
-	.success(function(response) {
-		if(response[0].status == "Y"){
-			$state.go('eventmenu.checkin');
-		}
-	});
-})
-
 .controller('tasksCtrl', function($scope,$state) {
 	$scope.showreview = function(){
 		$state.go('eventmenu.review');

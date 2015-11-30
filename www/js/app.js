@@ -6,12 +6,7 @@ angular.module('ionicApp', ['ionic','ngCordova','ngIOS9UIWebViewPatch','starter.
 .config(function($stateProvider, $urlRouterProvider) {
 
   $stateProvider
-  	.state('signin', {
-      url: "/sign-in",
-      templateUrl: "sign-in.html",
-      controller: 'SignInCtrl'
-    })
-    .state('eventmenu', {
+  	.state('eventmenu', {
       url: "/event",
       abstract: true,
       templateUrl: "templates/event-menu.html"
@@ -106,5 +101,5 @@ angular.module('ionicApp', ['ionic','ngCordova','ngIOS9UIWebViewPatch','starter.
       }
     })
 	
-	$urlRouterProvider.otherwise("/sign-in");
+	$urlRouterProvider.otherwise("/event/check-in");
 })
